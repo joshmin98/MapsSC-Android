@@ -8,22 +8,21 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 tools:context="itp341.wood.courtney.mapssc.MapsActivity">
 
-<EditText
-    android:layout_width="200dp"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="90dp"
-    android:text="Enter search term..."
-    android:textColor="@color/common_google_signin_btn_text_light"
-    android:id="@+id/search_bar"/>
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="90dp"
+        android:text="Enter search term..."
+        android:textColor="@color/common_google_signin_btn_text_light"
+        android:id="@+id/search_bar"/>
 
-<FrameLayout
+    <FrameLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/map_fragment_container"
-    android:layout_below="@+id/search_bar"
-    >
+    android:layout_below="@+id/search_bar">
 
-    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:map="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/map"
@@ -32,9 +31,22 @@ tools:context="itp341.wood.courtney.mapssc.MapsActivity">
         android:layout_height="match_parent"
         tools:context="itp341.wood.courtney.mapssc.MapsActivity" />
 
+    </FrameLayout>
 
+    <android.support.v4.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/drawerLayout">
 
-</FrameLayout>
+        <android.support.design.widget.NavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:menu="@menu/navigation_menu"
+            android:layout_gravity="start">
+        </android.support.design.widget.NavigationView>
 
+    </android.support.v4.widget.DrawerLayout>
 
 </RelativeLayout>
